@@ -19,7 +19,7 @@ export default function Index() {
         </section>
 
         <section className="relative flex flex-1 flex-col gap-2">
-          <div className="flex flex-col gap-2 md:hidden">
+          <div className="mx-auto flex flex-col gap-2 px-4 md:hidden">
             <p className="text-center text-sm font-semibold">
               A Clanap Comércio Importação e Exportação, desde 1997 vem
               representando, exclusivamente em todo o Brasil, uma gama de
