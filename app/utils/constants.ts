@@ -5,6 +5,14 @@ export const links = [
   { title: "fale conosco", url: "/fale-conosco" },
 ]
 
+export const homeImages = [
+  'img1.jpg',
+  'img2.jpg',
+  'img3.jpg',
+  'img4.jpg',
+  'img5.jpg',
+]
+
 export const products = [
   {
     title: "CIMENTO BRANCO ESTRUTURAL ROYAL CEM I",
