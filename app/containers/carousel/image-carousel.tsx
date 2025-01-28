@@ -1,10 +1,12 @@
 import Autoplay from 'embla-carousel-autoplay';
+import Fade from 'embla-carousel-fade';
 import useEmblaCarousel from 'embla-carousel-react';
 import { homeImages } from '~/utils/constants';
 
 export function ImageCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000 }),
+    Fade(),
   ]);
 
   return (
