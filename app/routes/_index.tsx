@@ -20,15 +20,12 @@ export default function Index() {
         </section>
 
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Apresentação <span className="underline decoration-red-500">Klanap</span>
-          </h2>
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               A Clanap Comércio Importação e Exportação, desde 1997 vem representando, exclusivamente em todo o Brasil,
               uma gama de produtos de ponta para a área da Construção Civil.
             </p>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               As inovações, são visíveis no resultado final dos produtos que oferece, fruto de uma busca incessante de
               novas marcas com qualidade, praticidade e elegância.
             </p>

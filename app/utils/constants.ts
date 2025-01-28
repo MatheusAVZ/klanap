@@ -1,3 +1,10 @@
+export const links = [
+  { title: "home", url: "/" },
+  { title: "quem somos", url: "/quem-somos" },
+  { title: "produtos", url: "/produtos" },
+  { title: "fale conosco", url: "/fale-conosco" },
+]
+
 export const products = [
   {
     title: "CIMENTO BRANCO ESTRUTURAL ROYAL CEM I",
