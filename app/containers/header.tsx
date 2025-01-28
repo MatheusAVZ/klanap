@@ -1,12 +1,19 @@
 import { Link } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { links } from '~/utils/constants';
+import { HamburgerNav } from './hamburguer-nav';
 
 export function Header() {
   return (
-    <header className="relative flex h-20 items-center justify-center bg-white shadow">
+    <header className="relative flex h-20 items-center justify-end bg-white pr-10 shadow md:justify-center md:p-0">
       <Link to="/" className="absolute left-0">
-        <img src="logo.png" alt="Logo" className="h-20" />
+        <img
+          src="logo.png"
+          alt="Logo"
+          className="h-20 w-20"
+          height={80}
+          width={80}
+        />
       </Link>
 
       <nav className="hidden space-x-8 md:flex">
@@ -25,6 +32,10 @@ export function Header() {
             </Link>
           </motion.div>
         ))}
+      </nav>
+
+      <nav className="md:hidden">
+        <HamburgerNav />
       </nav>
     </header>
   );
