@@ -1,33 +1,20 @@
-import { useState, useEffect } from "react"
+import Autoplay from 'embla-carousel-autoplay'
+import useEmblaCarousel from 'embla-carousel-react'
+import { products } from '~/utils/constants'
+import { ProductCard } from './product-card'
 
-export function ImageCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const slides = [
-    "/placeholder.svg?height=600&width=1920",
-    "/placeholder.svg?height=600&width=1920",
-    "/placeholder.svg?height=600&width=1920",
-  ]
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [slides.length])
+export function EmblaCarousel() {
+  const [emblaRef] = useEmblaCarousel({ loop: true, breakpoints: {'(min-width: 1024px)': { active: false }} }, [Autoplay({delay: 5000})])
 
   return (
-    <div className="relative h-[400px] md:h-[600px] w-full overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img src={slide || "/placeholder.svg"} alt={`Banner slide ${index + 1}`} className="object-cover" />
-        </div>
-      ))}
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex">
+        {products.map((product, index) => (
+          <div key={index} className="flex-[0_0_100%] mr-2 md:flex-[0_0_50%] lg:flex-1">
+            <ProductCard {...product}/>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
-
