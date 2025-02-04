@@ -21,6 +21,7 @@ export function Button({
       initial={{ scale: 1 }}
       transition={{ duration: 0.4 }}
       whileHover={{ scale: 1.1 }}
+      className={className}
     >
       <button
         className={cn(
