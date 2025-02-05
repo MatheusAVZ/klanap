@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react';
 import { Button } from '~/components/button';
+import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { cn } from '~/utils/cn';
 import { homeImages } from '~/utils/constants';
@@ -58,6 +59,8 @@ export default function aboutUsPage() {
           </Link>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function Index() {
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pb-10 pt-20">
         <section className="container mx-auto px-4 py-16">
           <ProductCarousel />
         </section>

@@ -1,5 +1,6 @@
 import { useLocation } from '@remix-run/react';
 import { useEffect } from 'react';
+import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { products } from '~/utils/constants';
 
@@ -71,6 +72,8 @@ export default function ProductsPage() {
           </div>
         ))}
       </main>
+
+      <Footer />
     </div>
   );
 }
