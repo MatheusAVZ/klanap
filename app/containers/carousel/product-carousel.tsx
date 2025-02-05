@@ -12,12 +12,17 @@ export function ProductCarousel() {
   return (
     <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex p-4">
-        {products.map(({ homeText, name, image }, index) => (
+        {products.map(({ homeText, name, image, id }) => (
           <div
-            key={index}
+            key={id}
             className="mr-2 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-1"
           >
-            <ProductCard description={homeText} title={name} image={image} />
+            <ProductCard
+              description={homeText}
+              title={name}
+              image={image}
+              id={id}
+            />
           </div>
         ))}
       </div>

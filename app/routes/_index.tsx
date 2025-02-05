@@ -1,4 +1,8 @@
-import { type MetaFunction } from '@remix-run/node';
+import {
+  type ActionFunctionArgs,
+  redirect,
+  type MetaFunction,
+} from '@remix-run/node';
 import { Button } from '~/components/button';
 import { ImageCarousel } from '~/containers/carousel/image-carousel';
 import { ProductCarousel } from '~/containers/carousel/product-carousel';
@@ -8,12 +12,23 @@ export const meta: MetaFunction = () => {
   return [{ title: 'Klanap' }];
 };
 
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = await request.formData();
+  const productId = formData.get('productId');
+
+  if (productId) {
+    return redirect(`/produtos#${productId}`);
+  }
+
+  return null;
+}
+
 export default function Index() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow pt-20">
         <section className="container mx-auto px-4 py-16">
           <ProductCarousel />
         </section>
