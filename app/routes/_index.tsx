@@ -6,6 +6,7 @@ import {
 import { Button } from '~/components/button';
 import { ImageCarousel } from '~/containers/carousel/image-carousel';
 import { ProductCarousel } from '~/containers/carousel/product-carousel';
+import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 
 export const meta: MetaFunction = () => {
@@ -68,7 +69,7 @@ export default function Index() {
         </section>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
