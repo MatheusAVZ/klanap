@@ -41,7 +41,7 @@ export default function ProductsPage() {
                       {splitLabel.length > 1 ? (
                         splitLabel.map((text, index) => (
                           <h3
-                            className="font-normal text-[#252D4F] md:text-lg"
+                            className="mb-2 font-normal text-[#252D4F] md:text-lg"
                             key={index}
                           >
                             {text}

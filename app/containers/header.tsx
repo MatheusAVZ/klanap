@@ -5,7 +5,7 @@ import { HamburgerNav } from './hamburguer-nav';
 
 export function Header() {
   return (
-    <header className="fixed flex h-20 w-full items-center justify-end bg-white pr-10 shadow md:justify-center md:p-0">
+    <header className="fixed z-50 flex h-20 w-full items-center justify-end bg-white pr-10 shadow md:justify-center md:p-0">
       <Link to="/" className="absolute left-0">
         <img
           src="logo.png"
