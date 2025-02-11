@@ -1,8 +1,8 @@
 export const links = [
-  { title: 'home', url: '/' },
-  { title: 'quem somos', url: '/quem-somos' },
-  { title: 'produtos', url: '/produtos' },
-  { title: 'fale conosco', url: '/fale-conosco' },
+  { title: 'Home', url: '/' },
+  { title: 'Quem Somos', url: '/quem-somos' },
+  { title: 'Produtos', url: '/produtos' },
+  { title: 'Fale Conosco', url: '/fale-conosco' },
 ];
 
 export const homeImages = [

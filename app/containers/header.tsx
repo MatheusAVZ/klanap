@@ -5,14 +5,14 @@ import { HamburgerNav } from './hamburguer-nav';
 
 export function Header() {
   return (
-    <header className="fixed z-50 flex h-20 w-full items-center justify-end bg-white pr-10 shadow md:justify-center md:p-0">
-      <Link to="/" className="absolute left-0">
+    <header className="fixed z-50 flex h-24 w-full items-center justify-end bg-black pr-10 shadow md:justify-center md:p-0">
+      <Link to="/" className="absolute left-0 pl-3">
         <img
           src="logo.png"
           alt="Logo"
-          className="h-20 w-20"
-          height={80}
-          width={80}
+          className="h-24 w-24"
+          height={96}
+          width={96}
         />
       </Link>
 
@@ -26,7 +26,7 @@ export function Header() {
           >
             <Link
               to={link.url}
-              className="text-gray-700 hover:text-gray-900 hover:underline"
+              className="text-gray-50 hover:text-gray-400 hover:underline"
             >
               {link.title}
             </Link>
