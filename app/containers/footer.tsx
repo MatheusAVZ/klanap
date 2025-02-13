@@ -5,19 +5,16 @@ import { links } from '~/utils/constants';
 export function Footer() {
   return (
     <footer className="w-full rotate-180 bg-white shadow">
-      <div className="flex rotate-180 items-center justify-between py-4 pb-8">
-        <Link
-          to="/"
-          className="mr-5 overflow-hidden rounded-full bg-black p-2 md:m-0"
-        >
+      <div className="flex rotate-180 flex-col-reverse items-center justify-between p-16 pb-8 pt-4 md:flex-row">
+        <Link to="/" className="mt-6 md:mr-5 md:mt-0">
           <img
-            src="/logo.png"
+            src="/new-logo.png"
             alt="Logo"
-            className="h-16 w-16 md:h-20 md:w-20"
+            className="max-w-60 contain-content md:max-w-60"
           />
         </Link>
 
-        <nav className="hidden flex-col space-y-2 md:flex">
+        <nav className="hidden flex-col space-y-2 lg:flex">
           {links.map((link, index) => (
             <motion.div
               initial={{ scale: 1 }}
@@ -62,7 +59,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="hidden md:flex" />
+        <Link to="/" className="mr-5 hidden md:m-0 lg:flex">
+          <img
+            src="/old-logo.png"
+            alt="Logo"
+            className="max-w-60 contain-content"
+          />
+        </Link>
       </div>
     </footer>
   );
