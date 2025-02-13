@@ -18,7 +18,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const productId = formData.get('productId');
 
   if (productId) {
-    return redirect(`/produtos#${productId}`);
+    return redirect(`/${productId}`);
   }
 
   return null;

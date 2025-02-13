@@ -13,7 +13,7 @@ export const homeImages = [
   'img5.jpg',
 ];
 
-type Product = {
+export type Product = {
   id: string;
   name: string;
   homeText: string;
