@@ -5,15 +5,15 @@ import { links } from '~/utils/constants';
 export function Footer() {
   return (
     <footer className="w-full rotate-180 bg-white shadow">
-      <div className="flex rotate-180 items-center justify-between py-4 pb-8 pt-0 md:pt-4">
+      <div className="flex rotate-180 items-center justify-between py-4 pb-8">
         <Link
           to="/"
-          className="overflow-hidden bg-black md:rounded-full md:p-2"
+          className="mr-5 overflow-hidden rounded-full bg-black p-2 md:m-0"
         >
           <img
             src="logo.png"
             alt="Logo"
-            className="h-24 w-auto md:h-20 md:w-20"
+            className="h-16 w-16 md:h-20 md:w-20"
           />
         </Link>
 
@@ -35,22 +35,28 @@ export function Footer() {
           ))}
         </nav>
 
-        <div>
+        <div className="flex flex-1 flex-col gap-1 md:flex-none">
           <div className="flex gap-2">
-            <p className="text-gray-700">Endereço:</p>
-            <p></p>
+            <p className="text-sm text-gray-700 md:text-base">Endereço:</p>
+            <p className="text-sm md:text-base">
+              Av Alvaro Ramos 1342/1352 - Quarta Parada - São Paulo
+            </p>
           </div>
           <div className="flex gap-2">
-            <p className="text-gray-700">Telefone:</p>
-            <a href="tel:+5511999999999">(011) 99999-9999</a>
+            <p className="text-sm text-gray-700 md:text-base">Telefone:</p>
+            <a href="tel:+551126018186" className="text-sm md:text-base">
+              (11) 2601-8186
+            </a>
           </div>
           <div className="flex gap-2">
-            <p className="text-gray-700">Email:</p>
-            <a href="mailto:kanap@kanap.com">kanap@kanap.com</a>
+            <p className="text-sm text-gray-700 md:text-base">Email:</p>
+            <a href="mailto:kanap@kanap.com" className="text-sm md:text-base">
+              Klanap@klanap.com.br{' '}
+            </a>
           </div>
         </div>
 
-        <div />
+        <div className="hidden md:flex" />
       </div>
     </footer>
   );
