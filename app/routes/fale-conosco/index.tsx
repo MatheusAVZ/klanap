@@ -39,7 +39,7 @@ export default function TalkToUsPage() {
           method="POST"
           className="flex flex-1 flex-col gap-20"
         >
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex flex-1 flex-col">
               <input
                 type="text"
