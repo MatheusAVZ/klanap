@@ -11,7 +11,7 @@ export function Footer() {
           className="mr-5 overflow-hidden rounded-full bg-black p-2 md:m-0"
         >
           <img
-            src="logo.png"
+            src="/logo.png"
             alt="Logo"
             className="h-16 w-16 md:h-20 md:w-20"
           />
