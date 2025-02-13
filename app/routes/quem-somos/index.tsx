@@ -10,8 +10,10 @@ export default function aboutUsPage() {
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
-      <main className="flex flex-col gap-4 py-24">
+      <main className="flex flex-col gap-4 py-24 pt-32">
         <section className="flex flex-col gap-4 px-[10%] md:px-[15%]">
+          <h1 className="mb-4 text-center text-4xl">Nossa história</h1>
+
           <p className="text-justify font-normal text-[#252D4F] md:text-xl">
             A Klanap trabalha há quase 30 anos no mercado brasileiro de
             construção civil, industrializando e comercializando uma vasta gama

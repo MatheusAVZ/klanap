@@ -97,7 +97,7 @@ export default function TalkToUsPage() {
         <iframe
           title="map"
           className="h-96 w-full"
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20%C3%81lvaro%20Ramos,%201342%20-%20Mooca,%20S%C3%A3o%20Paulo%20-%20SP,%2003330-000+(Klanap)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20%C3%81lvaro%20Ramos,%201342%20-%20Quarta%20Parada,%20S%C3%A3o%20Paulo%20-%20SP,%2003330-000,%20Brazil+(Klanap)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
