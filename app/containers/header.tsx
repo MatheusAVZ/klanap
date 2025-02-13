@@ -5,8 +5,8 @@ import { HamburgerNav } from './hamburguer-nav';
 
 export function Header() {
   return (
-    <header className="fixed z-50 flex h-24 w-full items-center justify-end bg-black pr-10 shadow md:justify-center md:p-0">
-      <Link to="/" className="absolute left-0 pl-3">
+    <header className="fixed z-50 flex h-24 w-full items-center justify-between bg-black px-10 shadow">
+      <Link to="/">
         <img
           src="/logo.png"
           alt="Logo"
@@ -37,6 +37,27 @@ export function Header() {
       <nav className="md:hidden">
         <HamburgerNav />
       </nav>
+
+      <div className="hidden flex-col gap-1 md:flex">
+        <div className="flex gap-2">
+          <p className="text-sm text-orange-500 md:text-base">Telefone:</p>
+          <a
+            href="tel:+551126018186"
+            className="text-sm text-gray-50 md:text-base"
+          >
+            (11) 2601-8186
+          </a>
+        </div>
+        <div className="flex gap-2">
+          <p className="text-sm text-orange-500 md:text-base">Email:</p>
+          <a
+            href="mailto:kanap@kanap.com"
+            className="text-sm text-gray-50 md:text-base"
+          >
+            Klanap@klanap.com.br{' '}
+          </a>
+        </div>
+      </div>
     </header>
   );
 }

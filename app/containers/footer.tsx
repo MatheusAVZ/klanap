@@ -44,13 +44,19 @@ export function Footer() {
           </div>
           <div className="flex gap-2">
             <p className="text-sm text-gray-700 md:text-base">Telefone:</p>
-            <a href="tel:+551126018186" className="text-sm md:text-base">
+            <a
+              href="tel:+551126018186"
+              className="text-sm text-blue-800 md:text-base"
+            >
               (11) 2601-8186
             </a>
           </div>
           <div className="flex gap-2">
             <p className="text-sm text-gray-700 md:text-base">Email:</p>
-            <a href="mailto:kanap@kanap.com" className="text-sm md:text-base">
+            <a
+              href="mailto:kanap@kanap.com"
+              className="text-sm text-blue-800 md:text-base"
+            >
               Klanap@klanap.com.br{' '}
             </a>
           </div>
