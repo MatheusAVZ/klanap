@@ -31,7 +31,9 @@ export default function TalkToUsPage() {
     <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
-      <main className="flex flex-1 items-center px-[10%] py-24 pt-32 md:px-[25%]">
+      <main className="flex flex-1 flex-col justify-center gap-20 px-[10%] py-24 pt-32 md:px-[25%]">
+        <h1 className="text-center text-4xl">Entre em contato!</h1>
+
         <Form
           id={form.id}
           method="POST"
@@ -91,6 +93,14 @@ export default function TalkToUsPage() {
             </Button>
           </div>
         </Form>
+
+        <iframe
+          title="map"
+          className="h-96 w-full"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20%C3%81lvaro%20Ramos,%201342%20-%20Mooca,%20S%C3%A3o%20Paulo%20-%20SP,%2003330-000+(Klanap)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </main>
 
       <Footer />
