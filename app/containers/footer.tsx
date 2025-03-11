@@ -1,6 +1,4 @@
 import { Link } from '@remix-run/react';
-import { motion } from 'framer-motion';
-import { links } from '~/utils/constants';
 
 export function Footer() {
   return (
@@ -13,24 +11,6 @@ export function Footer() {
             className="max-w-60 contain-content md:max-w-60"
           />
         </Link>
-
-        <nav className="hidden flex-col space-y-2 lg:flex">
-          {links.map((link, index) => (
-            <motion.div
-              initial={{ scale: 1 }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.1 }}
-              key={index}
-            >
-              <Link
-                to={link.url}
-                className="text-gray-700 hover:text-gray-900 hover:underline"
-              >
-                {link.title}
-              </Link>
-            </motion.div>
-          ))}
-        </nav>
 
         <div className="flex flex-1 flex-col gap-1 md:flex-none">
           <div className="flex gap-2">
