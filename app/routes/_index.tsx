@@ -3,6 +3,7 @@ import {
   redirect,
   type MetaFunction,
 } from '@remix-run/node';
+import { Link } from '@remix-run/react';
 import { Button } from '~/components/button';
 import { ImageCarousel } from '~/containers/carousel/image-carousel';
 import { ProductCarousel } from '~/containers/carousel/product-carousel';
@@ -62,9 +63,11 @@ export default function Index() {
                 qualidade, praticidade e elegância.
               </p>
             </div>
-            <Button variant="primary" className="mt-8 px-8 text-lg">
-              QUEM SOMOS
-            </Button>
+            <Link to="/quem-somos">
+              <Button variant="primary" className="mt-8 px-8 text-lg">
+                QUEM SOMOS
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
