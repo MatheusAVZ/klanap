@@ -1,7 +1,8 @@
 import { Link } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { links } from '~/utils/constants';
-import { HamburgerNav } from './hamburguer-nav';
+import { HamburgerNav } from './hamburger/nav';
+import { HamburgerProducts } from './hamburger/products';
 
 export function Header() {
   return (
@@ -17,21 +18,38 @@ export function Header() {
       </Link>
 
       <nav className="hidden space-x-8 md:flex">
-        {links.map((link, index) => (
-          <motion.div
-            initial={{ scale: 1 }}
-            transition={{ duration: 0.4 }}
-            whileHover={{ scale: 1.1 }}
-            key={index}
-          >
-            <Link
-              to={link.url}
-              className="text-gray-50 hover:text-gray-400 hover:underline"
+        {links.map((link, index) =>
+          link.title === 'Produtos' ? (
+            <HamburgerProducts key={index}>
+              <motion.div
+                initial={{ scale: 1 }}
+                transition={{ duration: 0.4 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <Link
+                  to={link.url}
+                  className="text-gray-50 hover:text-gray-400 hover:underline"
+                >
+                  {link.title}
+                </Link>
+              </motion.div>
+            </HamburgerProducts>
+          ) : (
+            <motion.div
+              initial={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+              whileHover={{ scale: 1.1 }}
+              key={index}
             >
-              {link.title}
-            </Link>
-          </motion.div>
-        ))}
+              <Link
+                to={link.url}
+                className="text-gray-50 hover:text-gray-400 hover:underline"
+              >
+                {link.title}
+              </Link>
+            </motion.div>
+          ),
+        )}
       </nav>
 
       <nav className="md:hidden">
