@@ -1,5 +1,3 @@
-import { Link } from '@remix-run/react';
-import { Button } from '~/components/button';
 import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { cn } from '~/utils/cn';
@@ -56,9 +54,9 @@ export default function aboutUsPage() {
             excelência dos cimentos Klanap.
           </p>
 
-          <Link to="/produtos">
+          {/* <Link to="/produtos">
             <Button variant="primary">Ver Produtos</Button>
-          </Link>
+          </Link> TODO: HIDDEN PRODUCTS */}
         </section>
       </main>
 

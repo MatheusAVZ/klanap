@@ -1,7 +1,7 @@
 export const links = [
   { title: 'Home', url: '/' },
   { title: 'Quem Somos', url: '/quem-somos' },
-  { title: 'Produtos', url: '/produtos' },
+  // { title: 'Produtos', url: '/produtos' }, TODO: HIDDEN PRODUCTS
   { title: 'Fale Conosco', url: '/fale-conosco' },
 ];
 

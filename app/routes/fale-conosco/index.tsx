@@ -1,6 +1,8 @@
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
-import { Form, useNavigation } from '@remix-run/react';
+import { data, type ActionFunctionArgs } from '@remix-run/node';
+import { Form, useNavigation, useActionData } from '@remix-run/react';
+import { Resend } from 'resend';
 import { z } from 'zod';
 import { Button } from '~/components/button';
 import { Footer } from '~/containers/footer';
@@ -18,12 +20,68 @@ const schema = z.object({
     .min(10, { message: 'Este campo deve ter no mínimo 10 caracteres' }),
 });
 
+type ActionData =
+  | { success: true }
+  | { error: string }
+  | { status: 'error'; submission: Record<string, string[]> };
+
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = await request.formData();
+  const submission = parseWithZod(formData, { schema });
+
+  if (submission.status !== 'success') {
+    const reply = submission.reply();
+    const errors = Object.entries(reply.error || {}).reduce<
+      Record<string, string[]>
+    >((acc, [key, value]) => {
+      if (value) {
+        acc[key] = value;
+      }
+      return acc;
+    }, {});
+    return data<ActionData>({
+      status: 'error',
+      submission: errors,
+    });
+  }
+
+  const { name, email, message } = submission.value;
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
+  try {
+    await resend.emails.send({
+      from: `Klanap <klanap@klanap.com.br>`,
+      to: 'klanap@klanap.com.br',
+      subject: `Nova mensagem de ${name}`,
+      html: `
+        <h2>Nova mensagem de contato</h2>
+        <p><strong>Nome:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mensagem:</strong></p>
+        <p>${message}</p>
+      `,
+    });
+
+    return data<ActionData>({ success: true });
+  } catch (error) {
+    return data<ActionData>(
+      {
+        error:
+          'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.',
+      },
+      { status: 500 },
+    );
+  }
+}
+
 export default function TalkToUsPage() {
   const [form, fields] = useForm({
     onValidate: ({ formData }) => parseWithZod(formData, { schema }),
   });
 
   const { state } = useNavigation();
+  const actionData = useActionData<typeof action>();
 
   const isLoading = state === 'loading' || state === 'submitting';
 
@@ -33,6 +91,18 @@ export default function TalkToUsPage() {
 
       <main className="flex flex-1 flex-col justify-center gap-20 px-[10%] py-24 pt-32 md:px-[25%]">
         <h1 className="text-center text-4xl">Entre em contato!</h1>
+
+        {actionData && 'success' in actionData && actionData.success ? (
+          <div className="rounded bg-green-100 p-4 text-center text-green-800">
+            Mensagem enviada com sucesso! Entraremos em contato em breve.
+          </div>
+        ) : null}
+
+        {actionData && 'error' in actionData && actionData.error ? (
+          <div className="rounded bg-red-100 p-4 text-center text-red-800">
+            {actionData.error}
+          </div>
+        ) : null}
 
         <Form
           id={form.id}
