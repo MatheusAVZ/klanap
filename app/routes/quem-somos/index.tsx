@@ -1,7 +1,12 @@
+import { type MetaFunction } from '@remix-run/node';
 import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { cn } from '~/utils/cn';
 import { homeImages } from '~/utils/constants';
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Klanap' }];
+};
 
 export default function aboutUsPage() {
   return (

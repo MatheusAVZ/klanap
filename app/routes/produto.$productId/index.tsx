@@ -1,8 +1,12 @@
-import { type LoaderFunctionArgs } from '@remix-run/node';
+import { type MetaFunction, type LoaderFunctionArgs } from '@remix-run/node';
 import { redirect, useLoaderData } from '@remix-run/react';
 import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { products } from '~/utils/constants';
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Klanap' }];
+};
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const productId = params.productId;

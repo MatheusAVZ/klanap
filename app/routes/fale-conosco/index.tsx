@@ -1,12 +1,20 @@
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
-import { data, type ActionFunctionArgs } from '@remix-run/node';
+import {
+  data,
+  type ActionFunctionArgs,
+  type MetaFunction,
+} from '@remix-run/node';
 import { Form, useNavigation, useActionData } from '@remix-run/react';
 import { Resend } from 'resend';
 import { z } from 'zod';
 import { Button } from '~/components/button';
 import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Klanap' }];
+};
 
 const schema = z.object({
   name: z

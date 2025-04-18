@@ -17,22 +17,13 @@ export function Header() {
         />
       </Link>
 
-      <nav className="hidden space-x-8 md:flex">
+      <nav className="hidden h-full space-x-8 md:flex">
         {links.map((link, index) =>
           link.title === 'Produtos' ? (
             <HamburgerProducts key={index}>
-              <motion.div
-                initial={{ scale: 1 }}
-                transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <Link
-                  to={link.url}
-                  className="text-gray-50 hover:text-gray-400 hover:underline"
-                >
-                  {link.title}
-                </Link>
-              </motion.div>
+              <button className="h-full text-gray-50 hover:text-gray-400 hover:underline">
+                {link.title}
+              </button>
             </HamburgerProducts>
           ) : (
             <motion.div
@@ -43,7 +34,7 @@ export function Header() {
             >
               <Link
                 to={link.url}
-                className="text-gray-50 hover:text-gray-400 hover:underline"
+                className="flex h-full items-center text-gray-50 hover:text-gray-400 hover:underline"
               >
                 {link.title}
               </Link>

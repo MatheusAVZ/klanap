@@ -54,7 +54,7 @@ export const HamburgerNav = () => {
                     >
                       <Link
                         to={`/produto/${id}`}
-                        className="block w-32 overflow-hidden text-ellipsis text-nowrap text-gray-700 hover:text-gray-900 hover:underline"
+                        className="block w-40 overflow-hidden text-ellipsis text-nowrap text-gray-700 hover:text-gray-900 hover:underline"
                       >
                         {name}
                       </Link>
