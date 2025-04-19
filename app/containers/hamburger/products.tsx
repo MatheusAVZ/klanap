@@ -19,6 +19,11 @@ export const HamburgerProducts = ({ children }: PropsWithChildren) => {
         <Content
           className="z-50 flex flex-col gap-4 rounded-xl bg-gray-100 p-6 shadow-sm"
           sideOffset={5}
+          onPointerDownOutside={(event) => {
+            if (event.target instanceof HTMLButtonElement) {
+              event.preventDefault();
+            }
+          }}
         >
           <Arrow className="fill-gray-100" />
           {products.map(({ name, id }) => (
