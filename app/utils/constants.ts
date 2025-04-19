@@ -16,6 +16,7 @@ export const homeImages = [
 export type Product = {
   id: string;
   name: string;
+  shortName: string;
   homeText: string;
   image: string;
   description: {
@@ -29,6 +30,7 @@ export const products: Product[] = [
     id: 'royal-saco-52',
     image: '/products/royal-saco-52.png',
     name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM I 52,5 N - Sacaria 25KG',
+    shortName: 'CB Royal CEM I 52,5 N - 25KG',
     homeText:
       'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
     description: [
@@ -60,6 +62,7 @@ export const products: Product[] = [
     id: 'royal-saco-42',
     image: '/products/royal-saco-42.png',
     name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM II 42,5',
+    shortName: 'CB Royal CEM II 42,5 N',
     homeText:
       'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
     description: [
@@ -91,6 +94,7 @@ export const products: Product[] = [
     id: 'big-bag',
     image: '/products/big-bag.jpg',
     name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM I 52,5 N - Big Bag',
+    shortName: 'CB Royal CEM I 52,5 N - Big Bag',
     homeText:
       'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
     description: [
@@ -122,6 +126,7 @@ export const products: Product[] = [
     id: 'microsilex',
     image: '/products/microsilex.jpg',
     name: 'MICROSILEX',
+    shortName: 'Microsilex',
     homeText:
       'Microsilex é um produto desenvolvido à base de sílica natural para melhorar o desempenho de concretos e argamassas, devido às suas propriedades pozolânicas.',
     description: [

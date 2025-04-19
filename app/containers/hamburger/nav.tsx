@@ -5,7 +5,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSub,
   DropdownMenuSubTrigger,
-  DropdownMenuSubContent,
 } from '@radix-ui/react-dropdown-menu';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { Link } from '@remix-run/react';
@@ -41,11 +40,11 @@ export const HamburgerNav = () => {
                   </motion.div>
                 </DropdownMenuSubTrigger>
 
-                <DropdownMenuSubContent
+                <DropdownMenuContent
                   sideOffset={5}
-                  className="flex flex-col gap-4 rounded-xl bg-gray-200 p-5 shadow-2xl"
+                  className="mr-10 flex flex-col gap-4 rounded-xl bg-gray-200 p-5 shadow-2xl"
                 >
-                  {products.map(({ name, id }) => (
+                  {products.map(({ id, shortName }) => (
                     <motion.div
                       initial={{ scale: 1 }}
                       transition={{ duration: 0.4 }}
@@ -54,13 +53,13 @@ export const HamburgerNav = () => {
                     >
                       <Link
                         to={`/produto/${id}`}
-                        className="block w-40 overflow-hidden text-ellipsis text-nowrap text-gray-700 hover:text-gray-900 hover:underline"
+                        className="block overflow-hidden text-ellipsis text-nowrap text-gray-700 hover:text-gray-900 hover:underline"
                       >
-                        {name}
+                        {shortName}
                       </Link>
                     </motion.div>
                   ))}
-                </DropdownMenuSubContent>
+                </DropdownMenuContent>
               </DropdownMenuSub>
             ) : (
               <motion.div
