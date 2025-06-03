@@ -23,6 +23,7 @@ export type Product = {
     label: string;
     items: string[];
   }[];
+  report: string;
 };
 
 export const products: Product[] = [
@@ -57,6 +58,7 @@ export const products: Product[] = [
         ],
       },
     ],
+    report: '/products/reports/52.pdf',
   },
   {
     id: 'royal-saco-42',
@@ -89,6 +91,7 @@ export const products: Product[] = [
         ],
       },
     ],
+    report: '/products/reports/42-5.pdf',
   },
   {
     id: 'big-bag',
@@ -121,6 +124,7 @@ export const products: Product[] = [
         ],
       },
     ],
+    report: '/products/reports/52.pdf',
   },
   {
     id: 'microsilex',
@@ -147,5 +151,6 @@ export const products: Product[] = [
         ],
       },
     ],
+    report: '/products/reports/microsilex.pdf',
   },
 ];

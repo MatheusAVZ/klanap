@@ -1,5 +1,6 @@
 import { type MetaFunction, type LoaderFunctionArgs } from '@remix-run/node';
 import { redirect, useLoaderData } from '@remix-run/react';
+import { Button } from '~/components/button';
 import { Footer } from '~/containers/footer';
 import { Header } from '~/containers/header';
 import { products } from '~/utils/constants';
@@ -24,7 +25,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function ProductsPage() {
   const {
-    product: { id, description, image, name },
+    product: { id, description, image, name, report },
   } = useLoaderData<typeof loader>();
 
   return (
@@ -71,6 +72,10 @@ export default function ProductsPage() {
               );
             })}
           </div>
+
+          <a href={report} target="_blank" rel="noreferrer" className="mt-10">
+            <Button variant="primary">Ver laudo técnico</Button>
+          </a>
         </div>
       </main>
 

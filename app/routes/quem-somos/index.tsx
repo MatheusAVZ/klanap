@@ -58,10 +58,6 @@ export default function aboutUsPage() {
             Conheça nossa gama de produtos e se beneficie da qualidade e
             excelência dos cimentos Klanap.
           </p>
-
-          {/* <Link to="/produtos">
-            <Button variant="primary">Ver Produtos</Button>
-          </Link> TODO: HIDDEN PRODUCTS */}
         </section>
       </main>
 
