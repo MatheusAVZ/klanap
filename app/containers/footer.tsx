@@ -29,15 +29,6 @@ export function Footer() {
             </a>
           </div>
           <div className="flex gap-2">
-            <p className="text-sm text-gray-700 md:text-base">Email:</p>
-            <a
-              href="mailto:kanap@kanap.com"
-              className="text-sm text-blue-800 md:text-base"
-            >
-              Klanap@klanap.com.br{' '}
-            </a>
-          </div>
-          <div className="flex gap-2">
             <p className="text-sm text-gray-700 md:text-base">Whatsapp:</p>
             <a
               href="https://wa.me/5511945155293?text=Olá, gostaria de saber mais sobre os produtos da Klanap."
@@ -46,6 +37,15 @@ export function Footer() {
               className="text-sm text-blue-800 md:text-base"
             >
               (11) 94515-5293
+            </a>
+          </div>
+          <div className="flex gap-2">
+            <p className="text-sm text-gray-700 md:text-base">Email:</p>
+            <a
+              href="mailto:kanap@kanap.com"
+              className="text-sm text-blue-800 md:text-base"
+            >
+              Klanap@klanap.com.br{' '}
             </a>
           </div>
         </div>

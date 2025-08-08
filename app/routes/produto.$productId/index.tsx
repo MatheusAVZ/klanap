@@ -25,7 +25,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function ProductsPage() {
   const {
-    product: { id, description, image, name, report },
+    product: { id, description, image, name, report, fds },
   } = useLoaderData<typeof loader>();
 
   return (
@@ -73,9 +73,17 @@ export default function ProductsPage() {
             })}
           </div>
 
-          <a href={report} target="_blank" rel="noreferrer" className="mt-10">
-            <Button variant="primary">Ver laudo técnico</Button>
-          </a>
+          <div className="flex flex-row items-center gap-3">
+            <a href={report} target="_blank" rel="noreferrer" className="mt-10">
+              <Button variant="primary">Ver laudo técnico</Button>
+            </a>
+
+            {fds ? (
+              <a href={fds} target="_blank" rel="noreferrer" className="mt-10">
+                <Button variant="primary">Ver ficha de seguranca</Button>
+              </a>
+            ) : null}
+          </div>
         </div>
       </main>
 

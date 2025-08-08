@@ -175,7 +175,7 @@ export default function TalkToUsPage() {
         <iframe
           title="map"
           className="h-96 w-full"
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20%C3%81lvaro%20Ramos,%201342%20-%20Quarta%20Parada,%20S%C3%A3o%20Paulo%20-%20SP,%2003330-000,%20Brazil+(Klanap)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.16970349837!2d-46.5839307!3d-23.562347799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5eaf7b2d6095%3A0xd199677a3f895c88!2sR.%20Florian%C3%B3polis%2C%20233%20-%20Vila%20Bertioga%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003185-050!5e0!3m2!1spt-BR!2sbr!4v1754675004245!5m2!1spt-BR!2sbr"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
