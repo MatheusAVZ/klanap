@@ -65,7 +65,7 @@ export const products: Product[] = [
   {
     id: 'royal-saco-42',
     image: '/products/royal-saco-42.png',
-    name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM II 42,5 - Sacaria 25KG',
+    name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM II 42,5 N - Sacaria 25KG',
     shortName: 'CB Royal CEM II 42,5 N',
     homeText:
       'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
