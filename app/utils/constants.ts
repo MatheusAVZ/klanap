@@ -2,7 +2,7 @@ export const links = [
   { title: 'Home', url: '/' },
   { title: 'Quem Somos', url: '/quem-somos' },
   { title: 'Produtos', url: '/produtos' },
-  { title: 'Fale Conosco', url: '/fale-conosco' },
+  // { title: 'Fale Conosco', url: '/fale-conosco' },
 ];
 
 export const homeImages = [
