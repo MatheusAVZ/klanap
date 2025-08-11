@@ -16,7 +16,7 @@ export function Footer() {
           <div className="flex gap-2">
             <p className="text-sm text-gray-700 md:text-base">Endereço:</p>
             <p className="text-sm md:text-base">
-              Av Alvaro Ramos 1342/1352 - Quarta Parada - São Paulo
+              R. Florianópolis, 233 - Vila Bertioga, São Paulo
             </p>
           </div>
           <div className="flex gap-2">
