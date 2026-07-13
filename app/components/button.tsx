@@ -1,45 +1,37 @@
-import { motion } from 'framer-motion';
 import { type ComponentProps } from 'react';
 import { cn } from '~/utils/cn';
 
+type Variant = 'primary' | 'outline' | 'outline-inverse';
+
+// estilos compartilhados entre <button> e âncoras (buttonStyles em <a>/<Link>)
+export function buttonStyles(variant: Variant, className?: string) {
+  return cn(
+    'inline-flex w-fit items-center justify-center gap-2 rounded-sm px-6 py-3 text-sm font-semibold transition-colors',
+    {
+      'bg-brand-500 text-graphite-950 hover:bg-brand-400':
+        variant === 'primary',
+      'border border-graphite-700/40 text-ink hover:border-graphite-950 hover:text-graphite-950':
+        variant === 'outline',
+      'border border-white/25 text-white hover:border-white hover:bg-white/5':
+        variant === 'outline-inverse',
+    },
+    className,
+  );
+}
+
 type ButtonProps = {
-  variant: 'primary' | 'text';
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
+  variant?: Variant;
 } & ComponentProps<'button'>;
 
 export function Button({
-  variant,
-  leftIcon,
-  rightIcon,
+  variant = 'primary',
   children,
   className,
   ...buttonProps
 }: ButtonProps) {
   return (
-    <motion.div
-      initial={{ scale: 1 }}
-      transition={{ duration: 0.4 }}
-      whileHover={{ scale: 1.1 }}
-      className={className}
-    >
-      <button
-        className={cn(
-          'flex w-fit items-center justify-center rounded-full px-4 py-1.5 text-sm transition-colors',
-          {
-            'bg-orange-500 text-white hover:bg-orange-600':
-              variant === 'primary',
-            'text-primary-pure hover:bg-hover-secondary': variant === 'text',
-            'gap-2': leftIcon ?? rightIcon,
-          },
-          className,
-        )}
-        {...buttonProps}
-      >
-        {leftIcon ?? null}
-        {children}
-        {rightIcon ?? null}
-      </button>
-    </motion.div>
+    <button className={buttonStyles(variant, className)} {...buttonProps}>
+      {children}
+    </button>
   );
 }
