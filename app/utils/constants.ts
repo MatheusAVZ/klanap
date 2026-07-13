@@ -23,15 +23,15 @@ export function whatsappHref(message?: string) {
 export const warehouseImages = [
   {
     src: '/img1.jpg',
-    alt: 'Galpão da Klanap em São Paulo: empilhadeira movendo paletes de cimento branco em sacaria',
+    alt: 'Caminhão e empilhadeira movimentando big bags de cimento no galpão da Klanap',
   },
   {
     src: '/img2.jpg',
-    alt: 'Estoque de cimento especial paletizado no galpão da Klanap',
+    alt: 'Fachada do galpão da Klanap em São Paulo, com o letreiro laranja da marca',
   },
   {
     src: '/img3.jpg',
-    alt: 'Empilhadeira na entrada do galpão da Klanap, com paletes de sacaria ao fundo',
+    alt: 'Big bags de cimento branco Royal CEM I 52,5 N paletizados no estoque',
   },
   {
     src: '/img4.jpg',

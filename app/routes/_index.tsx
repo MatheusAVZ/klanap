@@ -122,10 +122,10 @@ export default function Index() {
         {/* o diferencial, sobre foto real do galpão */}
         <section className="relative isolate overflow-hidden bg-graphite-950 text-white">
           <img
-            src="/img1.jpg"
+            src="/img5.jpg"
             alt=""
             loading="lazy"
-            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            className="absolute inset-0 -z-10 h-full w-full object-cover object-top"
           />
           <div
             aria-hidden

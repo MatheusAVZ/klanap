@@ -88,26 +88,26 @@ export default function AboutUsPage() {
           <h2 className="sr-only">Nossa operação</h2>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
             <img
-              src={warehouseImages[0].src}
-              alt={warehouseImages[0].alt}
+              src={warehouseImages[4].src}
+              alt={warehouseImages[4].alt}
               loading="lazy"
               className="col-span-2 aspect-[16/9] w-full object-cover"
             />
             <img
-              src={warehouseImages[4].src}
-              alt={warehouseImages[4].alt}
+              src={warehouseImages[1].src}
+              alt={warehouseImages[1].alt}
               loading="lazy"
               className="aspect-[3/4] w-full object-cover md:aspect-auto md:h-full"
             />
             <img
-              src={warehouseImages[2].src}
-              alt={warehouseImages[2].alt}
+              src={warehouseImages[0].src}
+              alt={warehouseImages[0].alt}
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
             <img
-              src={warehouseImages[1].src}
-              alt={warehouseImages[1].alt}
+              src={warehouseImages[2].src}
+              alt={warehouseImages[2].alt}
               loading="lazy"
               className="aspect-[4/3] w-full object-cover"
             />
