@@ -21,7 +21,10 @@ export const meta: MetaFunction = () => {
 
 const specFacts = [
   { value: 'Desde 1997', detail: 'no mercado brasileiro de construção civil' },
-  { value: 'Suporte', detail: 'técnico desde a fórmula à produção' },
+  {
+    value: 'Suporte',
+    detail: 'técnico especializado desde a fórmula à produção',
+  },
   { value: 'Acima da EN', detail: 'resistência superior à normativa europeia' },
   { value: 'Laudo + FDS', detail: 'documentação técnica de todos os produtos' },
 ];
@@ -41,10 +44,10 @@ export default function Index() {
                 com quem entende dele.
               </h1>
               <p className="rise rise-1 max-w-[52ch] text-lg leading-relaxed text-white/80">
-                A Klanap é a representante no Brasil do cimento
-                branco estrutural Royal, produzido no Egito pela El Minya
-                Cement Co. — e a única que acompanha sua produção com suporte
-                técnico, da especificação à aplicação.
+                A Klanap é a representante no Brasil do cimento branco
+                estrutural Royal, produzido no Egito pela El Minya Cement Co. —
+                e a única que acompanha sua produção com suporte técnico, da
+                especificação à aplicação.
               </p>
               <div className="rise rise-2 flex flex-wrap items-center gap-4 pt-2">
                 <a
@@ -90,7 +93,10 @@ export default function Index() {
         <section aria-label="Dados da empresa" className="border-b border-line">
           <dl className="mx-auto grid max-w-6xl grid-cols-2 divide-line md:grid-cols-4 md:divide-x">
             {specFacts.map(({ value, detail }) => (
-              <div key={value} className="flex flex-col gap-1 px-5 py-6 md:px-8">
+              <div
+                key={value}
+                className="flex flex-col gap-1 px-5 py-6 md:px-8"
+              >
                 <dt className="sr-only">{detail}</dt>
                 <dd className="type-display text-xl text-ink">{value}</dd>
                 <dd className="text-sm leading-snug text-ink-soft">{detail}</dd>
@@ -100,15 +106,18 @@ export default function Index() {
         </section>
 
         {/* catálogo como fichas de spec */}
-        <section id="catalogo" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <section
+          id="catalogo"
+          className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28"
+        >
           <div className="mb-12 flex flex-col gap-3">
             <h2 className="type-display flex items-center gap-3 text-display uppercase text-ink">
               <span aria-hidden className="k-mark" />
               Catálogo
             </h2>
             <p className="max-w-[60ch] text-lg text-ink-soft">
-              Cimentos especiais com laudo técnico e ficha de
-              segurança disponíveis. Especificou, comprovou, aplicou.
+              Cimentos especiais com laudo técnico e ficha de segurança
+              disponíveis. Especificou, comprovou, aplicou.
             </p>
           </div>
 
@@ -138,9 +147,9 @@ export default function Index() {
             </h2>
             <p className="max-w-[52ch] text-lg leading-relaxed text-white/85">
               Suporte e acompanhamento técnico em todo o Brasil: ajudamos a
-              especificar o produto certo, orientamos a aplicação e
-              respondemos quando a obra precisa. É gente que conhece o
-              produto atendendo gente que constrói.
+              especificar o produto certo, orientamos a aplicação e respondemos
+              quando a obra precisa. É gente que conhece o produto atendendo
+              gente que constrói.
             </p>
             <a
               href={whatsappHref(
@@ -170,9 +179,9 @@ export default function Index() {
             </h2>
             <p className="max-w-[60ch] leading-relaxed text-ink-soft">
               Desde 1997 a Klanap importa e distribui cimentos especiais para
-              construtoras e indústrias em todo o Brasil — uma busca
-              incessante por marcas com qualidade, praticidade e resultado
-              visível no acabamento final.
+              construtoras e indústrias em todo o Brasil — uma busca incessante
+              por marcas com qualidade, praticidade e resultado visível no
+              acabamento final.
             </p>
             <Link
               to="/quem-somos"
