@@ -1,22 +1,56 @@
 export const links = [
   { title: 'Home', url: '/' },
   { title: 'Quem Somos', url: '/quem-somos' },
-  { title: 'Produtos', url: '/produtos' },
-  // { title: 'Fale Conosco', url: '/fale-conosco' },
+  { title: 'Produtos', url: '/#catalogo' },
 ];
 
-export const homeImages = [
-  'img1.jpg',
-  'img2.jpg',
-  'img3.jpg',
-  'img4.jpg',
-  'img5.jpg',
+export const contact = {
+  phone: '(11) 2601-8186',
+  phoneHref: 'tel:+551126018186',
+  email: 'klanap@klanap.com.br',
+  emailHref: 'mailto:klanap@klanap.com.br',
+  address: 'R. Florianópolis, 233 — Vila Bertioga, São Paulo — SP',
+  whatsappNumber: '(11) 94515-5293',
+};
+
+export function whatsappHref(message?: string) {
+  const text =
+    message ??
+    'Olá! Gostaria de saber mais sobre os produtos da Klanap.';
+  return `https://wa.me/5511945155293?text=${encodeURIComponent(text)}`;
+}
+
+export const warehouseImages = [
+  {
+    src: '/img1.jpg',
+    alt: 'Caminhão e empilhadeira movimentando big bags de cimento no galpão da Klanap',
+  },
+  {
+    src: '/img2.jpg',
+    alt: 'Fachada do galpão da Klanap em São Paulo, com o letreiro laranja da marca',
+  },
+  {
+    src: '/img3.jpg',
+    alt: 'Big bags de cimento branco Royal CEM I 52,5 N paletizados no estoque',
+  },
+  {
+    src: '/img4.jpg',
+    alt: 'Paletes de cimento branco prontos para expedição',
+  },
+  {
+    src: '/img5.jpg',
+    alt: 'Equipe da Klanap segurando sacos de cimento sulfoaluminoso no galpão',
+  },
 ];
 
 export type Product = {
   id: string;
   name: string;
   shortName: string;
+  /** norma / classificação, exibida em display grande (ex: "52,5 N") */
+  spec: string;
+  specDetail: string;
+  format: string;
   homeText: string;
   image: string;
   description: {
@@ -31,10 +65,13 @@ export const products: Product[] = [
   {
     id: 'royal-saco-52',
     image: '/products/royal-saco-52.png',
-    name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM I 52,5 N - Sacaria 25KG',
-    shortName: 'CB Royal CEM I 52,5 N - 25KG',
+    name: 'Cimento Branco Estrutural Royal CEM I 52,5 N',
+    shortName: 'CB Royal CEM I 52,5 N — 25 kg',
+    spec: '52,5 N',
+    specDetail: 'CEM I · EN 197-1',
+    format: 'Sacaria 25 kg',
     homeText:
-      'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
+      'O cimento branco estrutural de maior brancura do mundo, produzido pela Royal El Minya Cement Co. no Egito. Importação exclusiva Klanap.',
     description: [
       {
         label:
@@ -65,14 +102,17 @@ export const products: Product[] = [
   {
     id: 'royal-saco-42',
     image: '/products/royal-saco-42.png',
-    name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM II 42,5 N - Sacaria 25KG',
-    shortName: 'CB Royal CEM II 42,5 N',
+    name: 'Cimento Branco Estrutural Royal CEM II 42,5 N',
+    shortName: 'CB Royal CEM II 42,5 N — 25 kg',
+    spec: '42,5 N',
+    specDetail: 'CEM II · EN 197-1',
+    format: 'Sacaria 25 kg',
     homeText:
-      'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
+      'Brancura e trabalhabilidade superiores com excelente tempo de pega, para qualquer tipo de obra em qualquer clima.',
     description: [
       {
         label:
-          'O cimento branco Royal 42.5N é de extrema qualidade e apresenta possibilidades de uso semelhantes ao 52.5N:',
+          'O cimento branco Royal é de extrema qualidade e apresenta inúmeras possibilidades de uso:',
         items: [
           'Aplicações estruturais com maior resistência',
           'Argamassas com acabamento colorido para ambientes internos e externos',
@@ -83,7 +123,7 @@ export const products: Product[] = [
       },
       {
         label:
-          '   Por ser da categoria CEM II 42,5, o cimento Royal tem como destaque:',
+          'Por ser da categoria CEM II 42,5, o cimento Royal tem como destaque:',
         items: [
           'Mais branco',
           'Melhor tempo de pega',
@@ -99,10 +139,13 @@ export const products: Product[] = [
   {
     id: 'big-bag',
     image: '/products/big-bag.jpg',
-    name: 'CIMENTO BRANCO ESTRUTURAL ROYAL CEM I 52,5 N - Big Bag',
-    shortName: 'CB Royal CEM I 52,5 N - Big Bag',
+    name: 'Cimento Branco Estrutural Royal CEM I 52,5 N — Big Bag',
+    shortName: 'CB Royal CEM I 52,5 N — Big Bag',
+    spec: '52,5 N',
+    specDetail: 'CEM I · EN 197-1',
+    format: 'Big Bag',
     homeText:
-      'A Klanap é a principal representante e importadora do cimento Royal El Minya Cement Co. no Brasil, produzido no Egito, sendo uma das principais fabricantes de cimento branco do mundo.',
+      'O mesmo cimento branco estrutural Royal 52,5 N, em Big Bag para indústrias e obras de grande volume.',
     description: [
       {
         label:
@@ -131,30 +174,32 @@ export const products: Product[] = [
     fds: '/products/fds/cimento-branco.pdf',
   },
   {
-    id: 'microsilex',
-    image: '/products/microsilex.jpg',
-    name: 'MICROSILEX',
-    shortName: 'Microsilex',
+    id: 'metacaulim',
+    image: '/products/metacaulim.png',
+    name: 'Metacaulim HP Ultra',
+    shortName: 'Metacaulim HP Ultra — 20 kg',
+    spec: 'HP Ultra',
+    specDetail: 'Metacaulim de alta reatividade · NBR 15.894',
+    format: 'Sacaria 20 kg',
     homeText:
-      'Microsilex é um produto desenvolvido à base de sílica natural para melhorar o desempenho de concretos e argamassas, devido às suas propriedades pozolânicas.',
+      'Adição mineral de alta eficiência que aumenta resistência, impermeabiliza e reduz manutenções em concreto, pasta de cimento e argamassa.',
     description: [
       {
         label:
-          ' Ao ser mesclado com concreto e combinado com cimento e água, tem suas características químicas e físicas melhoradas, deixando de ser um concreto convencional e tornando-se um concreto de alto desempenho. /n Microsilex incrementa a resistência (28 dias em diante), melhora o manuseio, reduz a permeabilidade, ajuda a controlar a reação álcali-agregada e aumenta a resistência a sulfatos e erosões. /n O produto deve ser usado como aditivo e misturado em proporção ao cimento e argamassa, e é indicado para aplicações que necessitam de alto desempenho, como obras em:',
+          'Metacaulim HP Ultra é uma adição mineral de alta eficiência, aplicada no concreto, pasta de cimento e argamassa. É a solução ideal em obras de grande porte, barragens, portos e obras de saneamento, largamente utilizada nas principais obras do país. Seus principais benefícios:',
         items: [
-          'Pontes',
-          'Pavimentos',
-          'Concreto lançado',
-          'Canais',
-          'Tanques de águas residuais',
-          'Concretos de alta resistência',
-          'Estruturas marítimas',
-          'Calçamento de poços',
-          'Mescla de argamassas',
-          'Em qualquer concreto exposto ao ataque de sulfatos e erosão',
+          'Aumento das resistências mecânicas à compressão, tração e abrasão, em todas as idades, em até 40%',
+          'Redução e controle das reatividades álcali-agregado em até 95%',
+          'Aumento da resistência ao ataque por sulfato, ácidos e outros agentes químicos',
+          'Redução da penetração de cloretos em até 75%',
+          'Redução da corrosão de armaduras',
+          'Diminuição do calor de hidratação e da fissuração de origem térmica',
+          'Diminuição da porosidade e permeabilidade em até 90%',
+          'Melhoria estética da superfície, controle da eflorescência, fissuração e desgaste',
+          'Reologia melhorada: maior coesão, até 90% menos exsudação, redução em até 50% da reflexão em concretos projetados, maior fluidez e menos segregação em concretos autoadensáveis',
         ],
       },
     ],
-    report: '/products/reports/microsilex.pdf',
+    report: '/products/reports/metacaulim.pdf',
   },
 ];
