@@ -23,7 +23,7 @@ export function Footer() {
             <span className="sr-only">Klanap — página inicial</span>
           </Link>
           <p className="max-w-xs text-sm leading-relaxed text-white/70">
-            Representante exclusiva do cimento branco Royal — El Minya Cement
+            Representante do cimento branco Royal — El Minya Cement
             Co. — no Brasil desde 1997.
           </p>
         </div>

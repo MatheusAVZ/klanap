@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 
 const specFacts = [
   { value: 'Desde 1997', detail: 'no mercado brasileiro de construção civil' },
-  { value: 'Exclusiva', detail: 'representação Royal El Minya Cement Co.' },
+  { value: 'Suporte', detail: 'técnico desde a fórmula à produção' },
   { value: 'Acima da EN', detail: 'resistência superior à normativa europeia' },
   { value: 'Laudo + FDS', detail: 'documentação técnica de todos os produtos' },
 ];
@@ -41,9 +41,9 @@ export default function Index() {
                 com quem entende dele.
               </h1>
               <p className="rise rise-1 max-w-[52ch] text-lg leading-relaxed text-white/80">
-                A Klanap é a representante exclusiva no Brasil do cimento
+                A Klanap é a representante no Brasil do cimento
                 branco estrutural Royal, produzido no Egito pela El Minya
-                Cement Co. — e a única que acompanha sua obra com suporte
+                Cement Co. — e a única que acompanha sua produção com suporte
                 técnico, da especificação à aplicação.
               </p>
               <div className="rise rise-2 flex flex-wrap items-center gap-4 pt-2">
@@ -107,7 +107,7 @@ export default function Index() {
               Catálogo
             </h2>
             <p className="max-w-[60ch] text-lg text-ink-soft">
-              Cimentos especiais e aditivos com laudo técnico e ficha de
+              Cimentos especiais com laudo técnico e ficha de
               segurança disponíveis. Especificou, comprovou, aplicou.
             </p>
           </div>

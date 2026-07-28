@@ -22,8 +22,8 @@ const milestones = [
     detail: 'início da operação no mercado brasileiro de construção civil',
   },
   {
-    value: 'Royal',
-    detail: 'representação exclusiva da El Minya Cement Co. (Egito) no Brasil',
+    value: 'Qualidade',
+    detail: 'de excelência comprovada por laudo',
   },
   {
     value: 'Brasil todo',
