@@ -9,12 +9,8 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group relative flex h-full flex-col border border-line bg-white transition-colors hover:border-graphite-700">
       <div className="flex flex-col gap-0.5 border-b border-line px-6 py-4">
-        <p className="type-spec whitespace-nowrap text-xs text-ink-soft">
-          {format}
-        </p>
-        <p className="type-spec whitespace-nowrap text-xs text-ink-soft">
-          {specDetail}
-        </p>
+        <p className="type-spec text-xs text-ink-soft">{format}</p>
+        <p className="type-spec text-xs text-ink-soft">{specDetail}</p>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 px-6 pb-6 pt-5">
